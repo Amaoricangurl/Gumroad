@@ -30,21 +30,24 @@ const CartPreviewModal: React.FC<CartPreviewModalProps> = ({ items }) => {
             <div key={item.id} className="flex items-start mb-4">
               <Image src="/item-image.webp" alt={item.name} width={80} height={80} className="rounded-md mr-4" />
               <div className="flex-grow relative">
-                <p className="box-border text-[#ddd] cursor-pointer block font-['Mabry_Pro',Avenir,Montserrat,Corbel,'URW_Gothic',source-sans-pro,sans-serif] text-[14px] leading-[18.2px] m-0 max-w-full min-w-0 overflow-wrap-anywhere p-0 align-bottom w-full antialiased font-bold pr-16 underline mb-1">{item.name}</p>
-                <p className="box-border text-[#ddd] cursor-pointer block font-['Mabry_Pro',Avenir,Montserrat,Corbel,'URW_Gothic',source-sans-pro,sans-serif] text-[14px] leading-[18.2px] m-0 max-w-full min-w-0 overflow-wrap-anywhere p-0 align-bottom antialiased underline mb-3">{item.creator}</p>
+                <p className="box-border text-[rgb(221,221,221)] cursor-pointer -webkit-box font-['Mabry_Pro',Avenir,Montserrat,Corbel,'URW_Gothic',source-sans-pro,sans-serif] text-base font-bold leading-[22.4px] m-0 max-w-full min-w-0 overflow-wrap-anywhere overflow-hidden align-bottom w-full pr-16 underline isolate mb-1">{item.name}</p>
+                <p className="box-border text-[#ddd] cursor-pointer block font-['Mabry_Pro',Avenir,Montserrat,Corbel,'URW_Gothic',source-sans-pro,sans-serif] text-[14px] leading-[18.2px] m-0 max-w-full min-w-0 overflow-wrap-anywhere p-0 align-bottom antialiased underline mb-1">{item.creator}</p>
                 <p className="absolute top-0 right-0 text-sm font-semibold">${item.price.toFixed(2)}</p>
                 <p className="box-border text-[#ddd] font-['Mabry_Pro',Avenir,Montserrat,Corbel,'URW_Gothic',source-sans-pro,sans-serif] text-[14px] leading-[18.2px] m-0 max-w-full min-w-0 overflow-wrap-anywhere p-0 align-bottom list-none antialiased mb-1"><strong>Qty:</strong> 1</p>
                 <p className="box-border text-[#ddd] font-['Mabry_Pro',Avenir,Montserrat,Corbel,'URW_Gothic',source-sans-pro,sans-serif] text-[14px] leading-[18.2px] m-0 max-w-full min-w-0 overflow-wrap-anywhere p-0 align-bottom list-none antialiased"><strong>Version:</strong> English</p>
                 <div className="flex justify-end mt-2 space-x-4">
-                  <button className="text-[#ddd] underline text-xs hover:text-white transition-colors duration-200">Configure</button>
-                  <button className="text-[#ddd] underline text-xs hover:text-white transition-colors duration-200">Remove</button>
+                  <button className="text-[#ddd] underline text-[14px] hover:text-white transition-colors duration-200">Configure</button>
+                  <button className="text-[#ddd] underline text-[14px] hover:text-white transition-colors duration-200">Remove</button>
                 </div>
               </div>
             </div>
           ))}
           <div className="border-t border-[rgba(221,221,221,0.35)] pt-4 mb-4">
-            <p className="flex justify-between mb-1"><span>Subtotal:</span> <span className="font-semibold">${subtotal.toFixed(2)}</span></p>
-            <p className="text-sm text-gray-400">Shipping and taxes calculated at checkout</p>
+            <p className="flex justify-between box-border text-[rgb(221,221,221)] color-scheme-light-dark block font-['Mabry_Pro',Avenir,Montserrat,Corbel,'URW_Gothic',source-sans-pro,sans-serif] text-[20px] font-normal leading-[28px] m-0 max-w-full min-w-0 overflow-wrap-anywhere align-bottom">
+              <span>Subtotal:</span>
+              <span className="font-semibold">${subtotal.toFixed(2)}</span>
+            </p>
+            <p className="text-sm text-gray-400">*Shipping and taxes calculated at checkout</p>
           </div>
           <button className="w-full flex items-center justify-center gap-2 px-4 py-3 text-base bg-[rgb(221,221,221)] border border-[rgba(221,221,221,0.35)] rounded-[4px] text-black cursor-pointer font-['Mabry_Pro',Avenir,Montserrat,Corbel,'URW_Gothic',source-sans-pro,sans-serif] transition-all duration-[0.14s] ease-out antialiased hover:bg-[rgb(255,144,232)] hover:shadow-[4px_4px_0px_0px_rgb(0,0,0)] hover:-translate-x-1 hover:-translate-y-1">
             Go to cart
