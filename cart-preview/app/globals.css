@@ -85,3 +85,23 @@ body {
     text-wrap: balance;
   }
 }
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(221, 221, 221, 0.35);
+}
+
+.caret::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid black;
+}

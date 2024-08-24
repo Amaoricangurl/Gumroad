@@ -11,11 +11,10 @@ import CartPreviewModal from './CartPreviewModal';
 const cartItems = [
   {
     id: '1',
-    name: 'QUILTED VEST',
-    price: 123.43,
+    name: 'Graphic Guide to Residential Design  (PDF Ebook)',
+    price: 40,
     image: '/path-to-image.jpg',
-    size: 'XL',
-    description: 'Cotton...',
+    creator: 'Luis Furushio',
   },
 ];
 
