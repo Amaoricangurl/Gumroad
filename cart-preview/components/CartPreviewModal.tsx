@@ -42,7 +42,7 @@ const CartPreviewModal: React.FC<CartPreviewModalProps> = ({ items }) => {
               </div>
             </div>
           ))}
-          <div className="border-t border-[rgba(221,221,221,0.35)] pt-4 mb-4">
+          <div className="border-t border-[rgba(221,221,221,0.35)] pt-4 mb-4 -mx-4 px-4">
             <p className="flex justify-between box-border text-[rgb(221,221,221)] color-scheme-light-dark block font-['Mabry_Pro',Avenir,Montserrat,Corbel,'URW_Gothic',source-sans-pro,sans-serif] text-[20px] font-normal leading-[28px] m-0 max-w-full min-w-0 overflow-wrap-anywhere align-bottom">
               <span>Subtotal:</span>
               <span className="font-semibold">${subtotal.toFixed(2)}</span>
